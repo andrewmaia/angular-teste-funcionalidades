@@ -1,0 +1,50 @@
+<button (click)="carregar()">Testar Intercept</button>
+<div *ngIf="registros$ | async as registros">
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let registro of registros">
+        <td>{{ registro.nome }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br />
+Reactive Form:
+<form [formGroup]="form" (ngSubmit)="onSubmitReactiveForms(form)">
+  <div>
+    <label for="nome">Nome</label>
+    <div>
+      <input id="nome" formControlName="nome" type="text" />
+    </div>
+  </div>
+  <div>
+    <div>
+      <button type="submit" [disabled]="!form.valid">Submeter</button>
+    </div>
+  </div>
+</form>
+Template-Driven Form:
+<form #form2="ngForm" (ngSubmit)="onSubmitTempleteDrive()">
+  <div>
+    <label for="nome">Nome</label>
+    <div>
+      <input
+        id="nome"
+        name="nome"
+        [(ngModel)]="model.nome"
+        type="text"
+        required
+      />
+    </div>
+  </div>
+  <div>
+    <div>
+      <button type="submit" [disabled]="!form2.form.valid">Submeter</button>
+    </div>
+  </div>
+</form>
