@@ -14,7 +14,6 @@ export const authGuard: CanActivateFn = (
   | Promise<boolean | UrlTree>
   | boolean
   | UrlTree => {
-  debugger;
   if (localStorage.getItem('usuario')) return true;
   else return false;
 };
