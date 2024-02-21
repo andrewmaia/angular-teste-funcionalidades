@@ -6,9 +6,16 @@ import { CadastroDetalheComponent } from './cadastro-detalhe/cadastro-detalhe.co
 import { CadastroRoutingModule } from './cadastro-routing.module';
 import { CadastroService } from './cadastro.service';
 import { ComponenteNgContentComponent } from './componente-ng-content/componente-ng-content.component';
+import { OnChangesComponent } from './life-cycle-hooks/on-changes.component';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 
 @NgModule({
-  declarations: [CadastroDetalheComponent, ComponenteNgContentComponent],
+  declarations: [
+    CadastroDetalheComponent,
+    ComponenteNgContentComponent,
+    OnChangesComponent,
+    LifeCycleHooksComponent,
+  ],
   imports: [
     CommonModule,
     FormsModule, //Template driven forms

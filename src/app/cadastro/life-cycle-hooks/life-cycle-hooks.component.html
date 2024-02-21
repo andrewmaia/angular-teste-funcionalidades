@@ -1,0 +1,6 @@
+<label for="propriedade-input">Propriedade: </label>
+<input type="text" id="propriedade-input" [(ngModel)]="propriedade" />
+
+<button type="button" (click)="reset()">Reset Log</button>
+
+<on-changes [propriedade]="propriedade"></on-changes>
