@@ -1,4 +1,5 @@
-<button (click)="carregar()">Testar Intercept</button>
+<hr />
+<button (click)="carregar()">Testar Interceptor</button>
 <div *ngIf="registros$ | async as registros">
   <table>
     <thead>
@@ -14,6 +15,8 @@
   </table>
 </div>
 <br />
+<br />
+<hr />
 Reactive Form:
 <form [formGroup]="form" (ngSubmit)="onSubmitReactiveForms(form)">
   <div>
@@ -28,6 +31,9 @@ Reactive Form:
     </div>
   </div>
 </form>
+<br />
+<br />
+<hr />
 Template-Driven Form:
 <form #form2="ngForm" (ngSubmit)="onSubmitTempleteDrive()">
   <div>
@@ -48,3 +54,37 @@ Template-Driven Form:
     </div>
   </div>
 </form>
+<br />
+<br />
+<hr />
+<input #templateVariable />
+<button type="button" (click)="exibir(templateVariable.value)">
+  Exibir Template Variable
+</button>
+<br />
+<br />
+<hr />
+Interpolação:
+<br />
+{{ variavelInterpolada }}
+<br />
+<br />
+<hr />
+ViewChild:
+<br />
+<input
+  id="meuId"
+  #templateVaraiableParaViewChild
+  value="Veja meu valor no console"
+/>
+<br />
+<br />
+<hr />
+NgContent:
+<app-componente-ng-content
+  >Este é o conteudo inserido dimicamente pelo controle
+  PAI</app-componente-ng-content
+>
+<br />
+<br />
+<hr />
