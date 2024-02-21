@@ -1,5 +1,14 @@
-Componente principal
-<button (click)="autenticar()">Autenticar</button>
-<button (click)="logoff()">Logoff</button>
+<div style="border-style: solid; border-width: 0.5px">
+  Componente principal
+  <br />
+  <button (click)="autenticar()">Autenticar</button>
+  <button (click)="logoff()">Logoff</button>
+  <button (click)="validarServiceSingleton()">
+    Testar Service Singleton a partir do appComponent
+  </button>
+  <br />
+  <a routerLink="/cadastro">Pagina com Testes</a>
+</div>
+<br />
 <br />
 <router-outlet></router-outlet>

@@ -22,6 +22,8 @@ export class CadastroDetalheComponent implements OnInit, AfterViewInit {
   registros$: Observable<any[]>;
   model: any;
   variavelInterpolada: string;
+  variavelParaPropertyBinding: string;
+  variavelTwoWayBinding: string;
   @ViewChild('templateVaraiableParaViewChild')
   input: ElementRef;
 
@@ -29,6 +31,7 @@ export class CadastroDetalheComponent implements OnInit, AfterViewInit {
     this.registros$ = new Observable<any[]>();
     this.model = { nome: '' };
     this.variavelInterpolada = 'texto exibido por interpolação';
+    this.variavelParaPropertyBinding = 'texto exibido por Property Binding';
   }
 
   ngOnInit() {
@@ -55,5 +58,16 @@ export class CadastroDetalheComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     console.log(this.input.nativeElement.value);
+  }
+
+  validarServiceSingleton() {
+    this.cadastroService.validarServiceSingleton();
+  }
+
+  dispararEventBinding(msg: string) {
+    alert(msg);
+  }
+  LimparTwoWayBinding() {
+    this.variavelTwoWayBinding = '';
   }
 }

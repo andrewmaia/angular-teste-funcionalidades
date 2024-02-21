@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CadastroService } from './cadastro/cadastro.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-teste-funcionalidades';
+  constructor(private service: CadastroService) {}
+
   autenticar() {
     localStorage.setItem('usuario', 'usuario');
   }
 
   logoff() {
     localStorage.removeItem('usuario');
+  }
+
+  validarServiceSingleton() {
+    this.service.validarServiceSingleton();
   }
 }

@@ -1,4 +1,18 @@
+Service vinculados ao modulo principal são singletons:
+<br />
+<br />
+Clique neste botao e no botao acima 'Testar Service Singleton a partir do
+appComponent' para verificar que o service cadastroService é singleton para toda
+aplicacao
+<button (click)="validarServiceSingleton()">Chamar Service</button>
+<br />
+<br />
 <hr />
+Interceptor:
+<br />
+<br />
+Varifique no inpector do navegador que ao realizar a requisicao é adicionado o
+cabeçalho de autorizacão Bearer
 <button (click)="carregar()">Testar Interceptor</button>
 <div *ngIf="registros$ | async as registros">
   <table>
@@ -57,6 +71,8 @@ Template-Driven Form:
 <br />
 <br />
 <hr />
+Template Variables:
+<br />
 <input #templateVariable />
 <button type="button" (click)="exibir(templateVariable.value)">
   Exibir Template Variable
@@ -64,9 +80,34 @@ Template-Driven Form:
 <br />
 <br />
 <hr />
-Interpolação:
+<b>Tipos de DataBinding</b>
+<br />
+<br />
+Interpolação (Dado do componente para o template):
 <br />
 {{ variavelInterpolada }}
+<br />
+<br />
+Property Binding (Dado do componente para o template):
+<br />
+<input type="text" [value]="variavelParaPropertyBinding" style="width: 200px" />
+<br />
+<br />
+Event Binding (Ocorre do template para o componente):
+<br />
+<button (click)="dispararEventBinding('algumValor')">
+  Clique-me para disparar o event Binding
+</button>
+<br />
+<br />
+Two-way Binding (Ocorre nos dois sentidos):
+<br />
+Atualiza no componente:
+<input type="text" [(ngModel)]="variavelTwoWayBinding" />
+{{ variavelTwoWayBinding }}
+<br />
+Atualiza no template:
+<button (click)="LimparTwoWayBinding()">Limpar</button>
 <br />
 <br />
 <hr />
