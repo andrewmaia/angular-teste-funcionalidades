@@ -129,3 +129,32 @@ NgContent:
 <br />
 <br />
 <hr />
+Diretiva:
+<br />
+<br />
+<span appHighLight
+  >A diretiva highLight está alterando a cor de fundo deste elemento para
+  amarelo</span
+>
+<br />
+<br />
+<hr />
+Pipes:
+<br />
+<br />
+<span
+  >Esta data foi formatada usando o pipe date:
+  {{ variavelDateParaPipe | date : "dd/MM/yyyy" }}</span
+>
+<br />
+<br />
+<hr />
+Custom Pipes:
+<br />
+<br />
+<span>
+  {{
+    "ESTE TEXTO FOI FORMATADO USANDO O CUSTOM PIPE UPPER-LOWER-CASE"
+      | upperLowerCase : false
+  }}</span
+>

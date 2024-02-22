@@ -8,6 +8,8 @@ import { CadastroService } from './cadastro.service';
 import { ComponenteNgContentComponent } from './componente-ng-content/componente-ng-content.component';
 import { OnChangesComponent } from './life-cycle-hooks/on-changes.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
+import { HighLightDirective } from './diretivas/high-light.directive';
+import { UpperLowerCasePipe } from './pipes/upper-lower-case.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.com
     ComponenteNgContentComponent,
     OnChangesComponent,
     LifeCycleHooksComponent,
+    HighLightDirective,
+    UpperLowerCasePipe,
   ],
   imports: [
     CommonModule,

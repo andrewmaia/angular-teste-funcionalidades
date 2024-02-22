@@ -24,6 +24,8 @@ export class CadastroDetalheComponent implements OnInit, AfterViewInit {
   variavelInterpolada: string;
   variavelParaPropertyBinding: string;
   variavelTwoWayBinding: string;
+  variavelDateParaPipe: Date;
+  variavelDateParaCustomPipe: string;
   @ViewChild('templateVaraiableParaViewChild')
   input: ElementRef;
 
@@ -32,6 +34,8 @@ export class CadastroDetalheComponent implements OnInit, AfterViewInit {
     this.model = { nome: '' };
     this.variavelInterpolada = 'texto exibido por interpolação';
     this.variavelParaPropertyBinding = 'texto exibido por Property Binding';
+    this.variavelDateParaPipe = new Date(1999, 1, 1);
+    this.variavelDateParaCustomPipe = 'TEXTO ERA UPPER CASE';
   }
 
   ngOnInit() {
