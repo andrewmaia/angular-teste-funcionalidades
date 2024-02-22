@@ -10,6 +10,7 @@ import { OnChangesComponent } from './life-cycle-hooks/on-changes.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 import { HighLightDirective } from './diretivas/high-light.directive';
 import { UpperLowerCasePipe } from './pipes/upper-lower-case.pipe';
+import { ObservablesComponent } from './observables/observables.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { UpperLowerCasePipe } from './pipes/upper-lower-case.pipe';
     ComponenteNgContentComponent,
     OnChangesComponent,
     LifeCycleHooksComponent,
+    ObservablesComponent,
     HighLightDirective,
     UpperLowerCasePipe,
   ],

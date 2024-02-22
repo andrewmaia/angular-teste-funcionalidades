@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CadastroDetalheComponent } from './cadastro-detalhe/cadastro-detalhe.component';
 import { authGuard } from '../guard';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
+import { ObservablesComponent } from './observables/observables.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,11 @@ const routes: Routes = [
   {
     path: 'Hooks',
     component: LifeCycleHooksComponent,
+    canActivate: [authGuard],
+  },
+  {
+    path: 'Observables',
+    component: ObservablesComponent,
     canActivate: [authGuard],
   },
 ];
