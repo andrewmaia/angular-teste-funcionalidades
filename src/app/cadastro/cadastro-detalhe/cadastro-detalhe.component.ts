@@ -26,6 +26,7 @@ export class CadastroDetalheComponent implements OnInit, AfterViewInit {
   variavelTwoWayBinding: string;
   variavelDateParaPipe: Date;
   variavelDateParaCustomPipe: string;
+  time: Observable<string>;
   @ViewChild('templateVaraiableParaViewChild')
   input: ElementRef;
 
@@ -36,6 +37,11 @@ export class CadastroDetalheComponent implements OnInit, AfterViewInit {
     this.variavelParaPropertyBinding = 'texto exibido por Property Binding';
     this.variavelDateParaPipe = new Date(1999, 1, 1);
     this.variavelDateParaCustomPipe = 'TEXTO ERA UPPER CASE';
+    this.time = new Observable((observer) => {
+      setInterval(() => {
+        observer.next(new Date().toString());
+      }, 2000);
+    });
   }
 
   ngOnInit() {
