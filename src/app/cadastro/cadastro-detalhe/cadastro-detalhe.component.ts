@@ -8,7 +8,7 @@ import {
 import { FormControl, FormGroup } from '@angular/forms';
 import { CadastroService } from '../cadastro.service';
 import { Observable } from 'rxjs';
-import { requiredTextValidator } from '../../validator';
+import { requiredTextValidator } from '../Validators/validator';
 
 @Component({
   selector: 'app-cadastro-detalhe',
