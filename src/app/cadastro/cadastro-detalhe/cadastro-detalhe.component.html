@@ -37,6 +37,7 @@ Reactive Form:
     <label for="nome">Nome</label>
     <div>
       <input id="nome" formControlName="nome" type="text" />
+      <span *ngIf="form.get('nome')?.errors">*</span>
     </div>
   </div>
   <div>
