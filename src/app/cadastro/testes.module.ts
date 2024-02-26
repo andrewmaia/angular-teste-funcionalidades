@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CadastroDetalheComponent } from './cadastro-detalhe/cadastro-detalhe.component';
-import { CadastroRoutingModule } from './cadastro-routing.module';
-import { CadastroService } from './cadastro.service';
+import { TestesComponent } from './testes/testes.component';
+import { TestesRoutingModule } from './testes-routing.module';
+import { CadastroService } from './testes.service';
 import { ComponenteNgContentComponent } from './componente-ng-content/componente-ng-content.component';
 import { OnChangesComponent } from './life-cycle-hooks/on-changes.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
@@ -14,7 +14,7 @@ import { ObservablesComponent } from './observables/observables.component';
 
 @NgModule({
   declarations: [
-    CadastroDetalheComponent,
+    TestesComponent,
     ComponenteNgContentComponent,
     OnChangesComponent,
     LifeCycleHooksComponent,
@@ -26,7 +26,7 @@ import { ObservablesComponent } from './observables/observables.component';
     CommonModule,
     FormsModule, //Template driven forms
     ReactiveFormsModule, //ReactiveForms
-    CadastroRoutingModule,
+    TestesRoutingModule,
   ],
   providers: [CadastroService],
 })

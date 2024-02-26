@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CadastroDetalheComponent } from './cadastro-detalhe/cadastro-detalhe.component';
+import { TestesComponent } from './testes/testes.component';
 import { authGuard } from '../guard';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 import { ObservablesComponent } from './observables/observables.component';
+import { StandaloneComponent } from './standalone/standalone.component';
 
 const routes: Routes = [
   {
     path: 'Testes',
-    component: CadastroDetalheComponent,
+    component: TestesComponent,
     canActivate: [authGuard],
   },
   {
@@ -21,10 +22,15 @@ const routes: Routes = [
     component: ObservablesComponent,
     canActivate: [authGuard],
   },
+  {
+    path: 'Standalone',
+    component: StandaloneComponent,
+    canActivate: [authGuard],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CadastroRoutingModule {}
+export class TestesRoutingModule {}

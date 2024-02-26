@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CadastroService } from './cadastro/cadastro.service';
+import { CadastroService } from './cadastro/testes.service';
 
 @Component({
   selector: 'app-root',

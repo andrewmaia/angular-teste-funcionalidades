@@ -6,16 +6,15 @@ import {
   ViewChild,
 } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { CadastroService } from '../cadastro.service';
+import { CadastroService } from '../testes.service';
 import { Observable } from 'rxjs';
 import { requiredTextValidator } from '../Validators/validator';
 
 @Component({
-  selector: 'app-cadastro-detalhe',
-  templateUrl: './cadastro-detalhe.component.html',
-  styleUrls: ['./cadastro-detalhe.component.css'],
+  selector: 'app-testes',
+  templateUrl: './testes.component.html',
 })
-export class CadastroDetalheComponent implements OnInit, AfterViewInit {
+export class TestesComponent implements OnInit, AfterViewInit {
   form = new FormGroup({
     nome: new FormControl('', requiredTextValidator()),
   });
