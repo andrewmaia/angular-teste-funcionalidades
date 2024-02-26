@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { CadastroModule } from './cadastro/testes.module';
+import { TestesModule } from './testes/testes.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppInterceptor } from './app.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule, CadastroModule, AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule, TestesModule, AppRoutingModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true },
   ],

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CadastroService } from './cadastro/testes.service';
+import { TestesService } from './testes/testes.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { CadastroService } from './cadastro/testes.service';
 })
 export class AppComponent {
   title = 'angular-teste-funcionalidades';
-  constructor(private service: CadastroService) {}
+  constructor(private service: TestesService) {}
 
   autenticar() {
     localStorage.setItem('usuario', 'usuario');

@@ -6,7 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { CadastroService } from '../testes.service';
+import { TestesService } from '../testes.service';
 import { Observable } from 'rxjs';
 import { requiredTextValidator } from '../Validators/validator';
 
@@ -29,7 +29,7 @@ export class TestesComponent implements OnInit, AfterViewInit {
   @ViewChild('templateVaraiableParaViewChild')
   input: ElementRef;
 
-  constructor(private cadastroService: CadastroService) {
+  constructor(private testeService: TestesService) {
     this.registros$ = new Observable<any[]>();
     this.model = { nome: '' };
     this.variavelInterpolada = 'texto exibido por interpolação';
@@ -48,7 +48,7 @@ export class TestesComponent implements OnInit, AfterViewInit {
   }
 
   carregar() {
-    this.registros$ = this.cadastroService.executar();
+    this.registros$ = this.testeService.executar();
   }
 
   //Depende do módulo ReactiveFormsModule
@@ -70,7 +70,7 @@ export class TestesComponent implements OnInit, AfterViewInit {
   }
 
   validarServiceSingleton() {
-    this.cadastroService.validarServiceSingleton();
+    this.testeService.validarServiceSingleton();
   }
 
   dispararEventBinding(msg: string) {

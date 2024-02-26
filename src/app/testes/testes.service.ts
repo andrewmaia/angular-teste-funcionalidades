@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
-export class CadastroService {
+export class TestesService {
   qtdChamadas: number;
 
   constructor(private http: HttpClient) {

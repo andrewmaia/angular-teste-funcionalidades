@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TestesComponent } from './testes/testes.component';
 import { TestesRoutingModule } from './testes-routing.module';
-import { CadastroService } from './testes.service';
+import { TestesService } from './testes.service';
 import { ComponenteNgContentComponent } from './componente-ng-content/componente-ng-content.component';
 import { OnChangesComponent } from './life-cycle-hooks/on-changes.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
@@ -28,6 +28,6 @@ import { ObservablesComponent } from './observables/observables.component';
     ReactiveFormsModule, //ReactiveForms
     TestesRoutingModule,
   ],
-  providers: [CadastroService],
+  providers: [TestesService],
 })
-export class CadastroModule {}
+export class TestesModule {}
